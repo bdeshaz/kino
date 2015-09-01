@@ -1,4 +1,4 @@
-var kinoApp = angular.module('kinoApp', ['ngRoute','ui.bootstrap']);
+var kinoApp = angular.module('kinoApp', ['ngRoute','ui.bootstrap', 'ngStorage']);
 
 /*
  * Licensed to the Apache Software Foundation (ASF) under one

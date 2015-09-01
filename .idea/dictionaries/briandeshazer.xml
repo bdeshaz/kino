@@ -2,6 +2,7 @@
   <dictionary name="briandeshazer">
     <words>
       <w>deviceready</w>
+      <w>ngstorage</w>
     </words>
   </dictionary>
 </component>

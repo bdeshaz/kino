@@ -1,18 +1,27 @@
-<div class="row">
-    <div style="margin-top: 120px; margin-bottom: 30px;" class="col-xs-12">
-        <img class="img-responsive" src="img/ac_logo.png" style="margin-left: auto; margin-right: auto;"/>
-    </div>
-</div>
-<h1>arian-celina.com</h1>
-<br/>
-<div id="deviceready" class="blink" class="col-xs-12">
-    <p class="event listening">Connecting to Device</p>
-    <p class="event received">Device is Ready</p>
-    <p class="text-center"> Your location is: <br/>
-    	Latitude: {{latitude}}<br/>
-    	Longitude: {{longitude}} <br/>
-    </p>
-</div>
 <div class="col-xs-12">
-	<a href="#/about" class="btn btn-default center-block" style="color:#ffff00" role="button">About</a>
+    <form ng-model="nm" class="form-horizontal" novalidate>
+        <div class="form-group">
+            <h2>Name</h2>
+            <input type="text" class="form-control" ng-model="nm.id" name="uName" required="" />
+            <br />
+            <div ng-show="form.$submitted || form.uName.$touched">
+                <div ng-show="form.uName.$error.required">Tell us your name.</div>
+            </div>
+
+            Height:
+            <input type="number" name="uHeight" class="form-control" ng-model="nm.height" required="" />
+            <br />
+            <div ng-show="form.uHeight.submitted || form.uName.$touched">
+                <div ng-show=form.uName.$error.required">Tell us your height.</div>
+            </div>
+        </div>
+
+        <input ng-click="addUsers()" type="submit" class="btn btn-primary"/>
+
+    </form>
+
+    <button ng-click="loadUsers()" class="btn btn-primary">Load Users</button>
+    <pre>nm = {{ nm }}</pre>
+    <pre>users = {{users | json}}</pre>
+    <pre>data = {{ data | json }}</pre>
 </div>

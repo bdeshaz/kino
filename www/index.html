@@ -35,26 +35,26 @@
         <title>kino.com</title>
     </head>
     <body>
+        <div class="container-fluid">
+            <div class="menu">
 
-        <div class="menu">
+                <!-- Menu icon -->
+                <div class="icon-close">
+                    <img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/close.png">
+                </div>
 
-            <!-- Menu icon -->
-            <div class="icon-close">
-                <img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/close.png">
+                <!-- Menu -->
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
             </div>
-
-            <!-- Menu -->
-            <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Help</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
         </div>
-
         <div class="icon-menu">
             <i class="fa fa-bars"></i>
-            Menu
+            Kino
         </div>
 
         <div class="container-fluid" ng-view>
@@ -71,6 +71,8 @@
         <script type="text/javascript" src="js/angular/routes.js"></script>
         <script type="text/javascript" src="js/angular/controller.js"></script>
         <script type="text/javascript" src="js/menu.js"></script>
+        <script type="text/javascript" src="js/libs/ngstorage/ngStorage.min.js"></script>
+
    
 
         <script type="text/javascript">

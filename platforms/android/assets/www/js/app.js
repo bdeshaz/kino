@@ -1,3 +1,5 @@
+var kinoApp = angular.module('kinoApp', ['ngRoute','ui.bootstrap']);
+
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -19,14 +21,17 @@
 var app = {
     // Application Constructor
     initialize: function() {
+        
+        console.log("initializing");
         this.bindEvents();
+        console.log("initializing done");
     },
     // Bind Event Listeners
     //
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
+        document.addEventListener('deviceready', this.onDeviceReady, false);   
     },
     // deviceready Event Handler
     //
@@ -34,6 +39,7 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        navigator.geolocation.getCurrentPosition(app.onSuccess, app.onErr);
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -43,7 +49,16 @@ var app = {
 
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
+    },
 
-        console.log('Received Event: ' + id);
+    onErr: function(error)
+    {
+        alert('Unable to get your location. Without location you will not be able to use navigate feature! Error:' + '\n' + error.message);
+    },
+
+    onSuccess: function(position)
+    {
+        kinoApp.latitude = position.coords.latitude;
+        kinoApp.longitude = position.coords.longitude;
     }
 };
