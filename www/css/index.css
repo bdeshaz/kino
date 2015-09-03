@@ -1,9 +1,11 @@
 /* Initial body */
 body {
     left: 0;
-    margin: 0;
+    margin: 15px 15px;
     overflow: hidden;
     position: relative;
+    font-family: 'Open Sans', sans-serif;
+
 }
 
 /* Initial menu */
@@ -67,7 +69,26 @@ body {
     text-transform: uppercase;
 }
 
+.menu-title {
+    color: black;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
 .icon-menu i {
     color: black;
-    margin-right: 10px;
+}
+
+.height  {
+    display: inline-block;
+    width:49%;
+}
+
+.about {
+    margin: 20px 15px;
 }

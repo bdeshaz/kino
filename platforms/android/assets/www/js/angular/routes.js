@@ -3,12 +3,23 @@ kinoApp.config(['$routeProvider',
     $routeProvider.
         when('/', {
           templateUrl: 'views/main.html',
-          controller: 'mainController'
+          controller: 'mainController',
+          resolve: {
+              "check": function($localStorage, $location){
+                  if(!$localStorage.users){
+
+                  }else{
+                      $location.path('/about');
+                  }
+              }
+          }
         }).
         when('/about', {
-          templateUrl: 'views/about.html'
+          templateUrl: 'views/about.html',
+            controller: 'mainController'
         }).
         otherwise({
           redirectTo: '/'
         });
   }]);
+

@@ -1,5 +1,5 @@
 kinoApp.controller('mainController', function($scope, Users, $localStorage, $location) {
-    $scope.formURL = "views/main.html";
+    $scope.formURL = "views/setup.html";
     $scope.users = Users;
 
     $scope.addUsers = function () {
@@ -12,7 +12,18 @@ kinoApp.controller('mainController', function($scope, Users, $localStorage, $loc
 
     $scope.loadUsers = function () {
         $scope.data = $localStorage.users;
+        angular.forEach($scope.data, function(value, index){
+            var height_inches = (value.feet * 12) + (value.inches);
+            if(height_inches >= 60){
+                $scope.total = Math.round((106 + ((height_inches - 60) * 6)) * .958);
+            }else{
+                $scope.total = Math.round((106 - ((60 - height_inches) * 6)) * .958);
+            }
+        });
     };
+
+
+    $scope.loadUsers();
 
     $scope.showMenu = $location.path() !== '/';
 });

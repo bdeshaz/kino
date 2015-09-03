@@ -4,6 +4,8 @@ body {
     margin: 0;
     overflow: hidden;
     position: relative;
+    font-family: 'Open Sans', sans-serif;
+
 }
 
 /* Initial menu */
@@ -62,6 +64,17 @@ body {
     font-size: 16px;
     padding-bottom: 25px;
     padding-left: 25px;
+    padding-top: 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.menu-title {
+    color: black;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    padding-bottom: 25px;
     padding-top: 25px;
     text-decoration: none;
     text-transform: uppercase;
