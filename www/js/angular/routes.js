@@ -18,6 +18,10 @@ kinoApp.config(['$routeProvider',
           templateUrl: 'views/about.html',
             controller: 'mainController'
         }).
+        when('/start', {
+            templateUrl: 'views/start.html',
+            controller: 'startController'
+        }).
         otherwise({
           redirectTo: '/'
         });

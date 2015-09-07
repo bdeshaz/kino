@@ -2,7 +2,7 @@ kinoApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
         when('/', {
-          templateUrl: 'views/main.html',
+          templateUrl: 'views/setup.html',
           controller: 'mainController',
           resolve: {
               "check": function($localStorage, $location){

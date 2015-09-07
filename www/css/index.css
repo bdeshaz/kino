@@ -2,9 +2,11 @@
 body {
     left: 0;
     margin: 15px 15px;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
     position: relative;
     font-family: 'Open Sans', sans-serif;
+
 
 }
 
@@ -62,7 +64,6 @@ body {
     cursor: pointer;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
-    padding-bottom: 25px;
     padding-left: 25px;
     padding-top: 25px;
     text-decoration: none;
@@ -74,7 +75,6 @@ body {
     cursor: pointer;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
-    padding-bottom: 25px;
     padding-top: 25px;
     text-decoration: none;
     text-transform: uppercase;
@@ -90,5 +90,9 @@ body {
 }
 
 .about {
-    margin: 20px 15px;
+    margin: 15px 15px;
+}
+
+.start {
+    margin: 0 15px;
 }

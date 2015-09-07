@@ -20,6 +20,17 @@
             <div ng-show="form.uHeight.submitted || form.uName.$touched">
                 <div ng-show=form.uName.$error.required">Tell us your height.</div>
             </div>
+            <h3>Gender</h3>
+            <label>
+            <input type="radio" ng-model="nm.gender" required class="gender" value="male" />
+                Male</label>
+            <label>
+            <input type="radio" ng-model="nm.gender" required class="gender" value="female" />
+                Female</label>
+            <label>
+            <input type="radio" ng-model="nm.gender" required class="gender" value="other" />
+                Other</label>
+        </div>
 
         <button ng-disabled="setup_form.$invalid" ng-click="addUsers()" type="submit" class="btn btn-primary">Submit</button>
 
@@ -28,5 +39,6 @@
     <button ng-click="loadUsers()" class="btn btn-primary">Load Users</button>
     <pre>nm = {{ nm }}</pre>
     <pre>users = {{users | json}}</pre>
+    <pre>data = {{ data | json }}</pre>
 </div>
 

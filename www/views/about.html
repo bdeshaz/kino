@@ -1,8 +1,19 @@
 <!--<div ng-include="'views/menu.html'"></div>-->
 <div class="about row">
-    <header><h1>Welcome to Kino</h1></header>
-    <p>Here are your goals</p>
-    <h2>Weight</h2>
-    <!--<h3>{{}}</h3>-->
-    <pre>data = {{ total }}</pre>
+    <div ng-repeat="(key, val) in total">
+        <header><h1>Welcome, {{ key | uppercase}}!</h1></header>
+        <h2>Here are your goals</h2>
+        <h3>Weight: {{ val.weight }} lbs</h3>
+        <p>To be able to have those abs poppin'</p>
+
+        <h3>Lifts</h3>
+        <h4>Incline Bench: {{ val.goals.god_incb }} lbs</h4>
+        <h4>Weighted Chins: {{ val.goals.god_chin }} lbs</h4>
+        <h4>Overhead Press: {{ val.goals.god_ohp }} lbs</h4>
+        <h4>Barbell Curl: {{ val.goals.god_curl}} lbs</h4>
+
+        <input type="button" onclick="location.href='#/start';" value="Get Started" />
+    </div>
+
+    <!--<pre>data = {{ total | json }}</pre>-->
 </div>

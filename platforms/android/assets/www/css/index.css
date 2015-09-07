@@ -1,7 +1,7 @@
 /* Initial body */
 body {
     left: 0;
-    margin: 0;
+    margin: 15px 15px;
     overflow: hidden;
     position: relative;
     font-family: 'Open Sans', sans-serif;
@@ -82,5 +82,13 @@ body {
 
 .icon-menu i {
     color: black;
-    margin-right: 10px;
+}
+
+.height  {
+    display: inline-block;
+    width:49%;
+}
+
+.about {
+    margin: 15px 15px;
 }
