@@ -1,5 +1,5 @@
 kinoApp
-    .controller('startController', function($scope, $localStorage) {
+    .controller('startController', function($scope, $localStorage, $location) {
         var lifts =
         {
             'Incline Bench Press': '',
@@ -20,6 +20,8 @@ kinoApp
                 $localStorage.users[key]["starting_lifts"] = $scope.lifts;
             });
             delete($scope.lifts);
+            $location.path("/workout");
+
         };
 
         $scope.loadUsers = function () {

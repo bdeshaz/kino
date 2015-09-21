@@ -22,6 +22,10 @@ kinoApp.config(['$routeProvider',
             templateUrl: 'views/start.html',
             controller: 'startController'
         }).
+        when('/workout', {
+            templateUrl: 'views/workout.html',
+            controller: 'workoutController'
+        }).
         otherwise({
           redirectTo: '/'
         });
