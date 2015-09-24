@@ -1,10 +1,17 @@
 <div class="row">
     <h2>Workout Page</h2>
+
     <div ng-repeat="lift in lifts" class="col-md-6">
-        <p class="title">{{ lift.name | uppercase }} </p>
-        <div class="rep_holder" ng-repeat="set in lift.sets">
-            <p class="weight"> {{ set.weight }}</p>
-            <p class="reps" ng-click="minusOne($index)">{{ set.reps }} </p>
+        <div name="liftForm" novalidate>
+            <p class="title">{{ lift.name | uppercase }} </p>
+
+            <form class="rep_holder" ng-repeat="set in lift.sets">
+                <!--<p class="weight"> {{ set.weight }}</p>-->
+                <label>
+                <input type="number" class="form-control" ng-model="set.weight" value="set.weight" required>
+                </label>
+                <p class="reps" ng-click="minusOne($index)">{{ set.reps }} </p>
+            </form>
         </div>
 
         <!--<div class="rating">-->
