@@ -1,0 +1,21 @@
+<div class="start row">
+        <h3>Starting Lifts</h3>
+        <p>We will use your 8 rep max!</p>
+        <p>To do this, on each exercise, lift the weight that you can do
+        no more than 8 times. Start light, if it feels too light increase by
+        10lbs.</p>
+        <h3>Record your weight below</h3>
+    <form name="liftForm" novalidate>
+        <label ng-repeat="(key, val) in lifts" for="{{key}}">
+            {{key}}
+            <input type="number" class="form-control" ng-model="lifts[key]" id="{{key}}" required>
+
+        </label>
+        <button ng-disabled="liftForm.$invalid" ng-click="addStarts()" type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <button ng-click="loadUsers()" class="btn btn-primary">Load Users</button>
+
+    <pre>{{ lifts }}</pre>
+    <pre>user = {{users | json}}</pre>
+
+</div>

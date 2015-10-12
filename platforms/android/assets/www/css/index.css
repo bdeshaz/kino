@@ -2,9 +2,11 @@
 body {
     left: 0;
     margin: 15px 15px;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
     position: relative;
     font-family: 'Open Sans', sans-serif;
+
 
 }
 
@@ -62,7 +64,6 @@ body {
     cursor: pointer;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
-    padding-bottom: 25px;
     padding-left: 25px;
     padding-top: 25px;
     text-decoration: none;
@@ -74,7 +75,6 @@ body {
     cursor: pointer;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
-    padding-bottom: 25px;
     padding-top: 25px;
     text-decoration: none;
     text-transform: uppercase;
@@ -91,4 +91,36 @@ body {
 
 .about {
     margin: 15px 15px;
+}
+
+.start {
+    margin: 0 15px;
+}
+
+.rep_holder {
+    display: inline-block;
+}
+.reps {
+    background: #F65A5B ;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    line-height: 40px;
+    min-width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 10px 0 0;
+    text-align: center;
+    font-weight: 200;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background 500ms;
+}
+
+.weight {
+    margin: 0 0 0 15px;
+}
+
+.rep_holder input {
+    width: 45px;
 }
