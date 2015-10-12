@@ -6,6 +6,7 @@ kinoApp.controller('workoutController', function($scope, $localStorage, RoundSer
     angular.forEach($scope.users, function(value, key){
         $scope.incb = $scope.users[key]["starting_lifts"]["Incline Bench Press"];
         $scope.ben = $scope.users[key]["starting_lifts"]["Bench Press"];
+        $scope.raise = 0;
     });
 
     $scope.lifts = [
@@ -51,7 +52,39 @@ kinoApp.controller('workoutController', function($scope, $localStorage, RoundSer
                 {
                     weight: RoundService.getround($scope.ben * .8),
                     reps: 8
-                }]}
+                }]},
+        {
+            name: 'Lateral Raise',
+            sets: [
+                {
+                    weight: $scope.raise,
+                    reps: 12
+                },
+                {
+                    weight: $scope.raise,
+                    reps: 12
+
+                },
+                {
+                    weight: $scope.raise,
+                    reps: 12
+                }]},
+        {
+            name: 'Skull Crushers',
+            sets: [
+                {
+                    weight: $scope.raise,
+                    reps: 12
+                },
+                {
+                    weight: $scope.raise,
+                    reps: 12
+                },
+                {
+                    weight: $scope.raise,
+                    reps: 12
+                }]},
+
 
     ];
 

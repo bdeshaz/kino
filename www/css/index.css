@@ -97,7 +97,7 @@ body {
     margin: 0 15px;
 }
 
-.rep_holder {
+.rep_holder input {
     display: inline-block;
 }
 .reps {
@@ -119,4 +119,8 @@ body {
 
 .weight {
     margin: 0 0 0 15px;
+}
+
+.rep_holder input {
+    width: 50px;
 }
