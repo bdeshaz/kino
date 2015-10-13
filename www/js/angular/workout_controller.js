@@ -7,6 +7,7 @@ kinoApp.controller('workoutController', function($scope, $localStorage, RoundSer
         $scope.incb = $scope.users[key]["starting_lifts"]["Incline Bench Press"];
         $scope.ben = $scope.users[key]["starting_lifts"]["Bench Press"];
         $scope.raise = 0;
+        $scope.crush = 0;
     });
 
     $scope.lifts = [
@@ -73,15 +74,15 @@ kinoApp.controller('workoutController', function($scope, $localStorage, RoundSer
             name: 'Skull Crushers',
             sets: [
                 {
-                    weight: $scope.raise,
+                    weight: $scope.crush,
                     reps: 12
                 },
                 {
-                    weight: $scope.raise,
+                    weight: $scope.crush,
                     reps: 12
                 },
                 {
-                    weight: $scope.raise,
+                    weight: $scope.crush,
                     reps: 12
                 }]},
 
@@ -92,12 +93,10 @@ kinoApp.controller('workoutController', function($scope, $localStorage, RoundSer
     //    $scope.products[index].likes += 1;
     //};
 
-
     $scope.minusOne = function(index, x) {
-        for (x in $scope.lifts) {
-            $scope.lifts[x].sets[index].reps -= 1;
-            }
-        };
+            return $scope.lifts[x].sets[index].reps -= 1;
+    };
+
 });
 
 kinoApp.service('RoundService', function() {

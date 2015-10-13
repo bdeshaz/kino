@@ -1,3 +1,5 @@
+<div ng-include="'views/menu.html'"></div>
+
 <div class="row">
     <h2>Workout Page</h2>
 
@@ -7,9 +9,7 @@
             <p class="title">{{ lift.name | uppercase }} </p>
 
             <form class="rep_holder" ng-repeat="set in lift.sets">
-                <label>
                 <input type="number" class="form-control" ng-model="set.weight" value="set.weight" required>
-                </label>
                 <p class="reps" ng-model="set.reps" ng-click="minusOne($index)">{{ set.reps }} </p>
             </form>
         </div>

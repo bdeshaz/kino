@@ -64,7 +64,7 @@ body {
     cursor: pointer;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
-    padding-left: 25px;
+    padding-left: 0px;
     padding-top: 25px;
     text-decoration: none;
     text-transform: uppercase;
@@ -78,6 +78,7 @@ body {
     padding-top: 25px;
     text-decoration: none;
     text-transform: uppercase;
+    padding-left: 10px;
 }
 
 .icon-menu i {
@@ -106,9 +107,9 @@ body {
     cursor: pointer;
     display: inline-block;
     font-size: 15px;
-    line-height: 40px;
-    min-width: 40px;
-    height: 40px;
+    line-height: 35px;
+    min-width: 35px;
+    height: 35px;
     border-radius: 50%;
     margin: 0 10px 0 0;
     text-align: center;
@@ -122,5 +123,9 @@ body {
 }
 
 .rep_holder input {
-    width: 50px;
+    width: 42px;
+}
+
+h2 {
+    padding-left: 15px;
 }

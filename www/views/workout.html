@@ -7,16 +7,15 @@
             <p class="title">{{ lift.name | uppercase }} </p>
 
             <form class="rep_holder" ng-repeat="set in lift.sets">
+                <!--<p class="weight"> {{ set.weight }}</p>-->
                 <input type="number" class="form-control" ng-model="set.weight" value="set.weight" required>
-                <p class="reps" ng-model="set.reps" ng-click="minusOne($index)">{{ set.reps }} </p>
+                <div class="rep_holder1">
+                    <p class="reps" ng-model="set.reps" ng-click="minusOne($index, $parent.$index)">{{ set.reps }} </p>
+                </div>
             </form>
         </div>
 
         <!--<div ng-repeat="a_lift in a_lifts" class="col-md-6">-->
-
-
-
-
     </div>
 
 
@@ -24,7 +23,7 @@
         <!--<p class="likes" ng-click="plusOne($index)">+ {{ product.likes }} </p>-->
         <!--<p class="dislikes" ng-click="minusOne($index)">- {{ product.dislikes }} </p>-->
         <!--</div>-->
-    </div>
+    <!--</div>-->
 
     <pre>user = {{users | json}}</pre>
 
