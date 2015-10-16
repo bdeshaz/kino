@@ -13,8 +13,9 @@
                     <p class="reps" ng-model="set.reps" ng-click="minusOne($index, $parent.$index)">{{ set.reps }} </p>
                 </div>
             </form>
-        </div>
 
+        </div>
+        <button ng-disabled="liftForm.$invalid" ng-click="addLifts()" type="submit" class="btn btn-primary">Submit</button>
         <!--<div ng-repeat="a_lift in a_lifts" class="col-md-6">-->
     </div>
 

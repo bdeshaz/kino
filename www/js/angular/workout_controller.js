@@ -97,6 +97,11 @@ kinoApp.controller('workoutController', function($scope, $localStorage, RoundSer
             return $scope.lifts[x].sets[index].reps -= 1;
     };
 
+    $scope.addLifts = function() {
+        angular.forEach($localStorage.users, function (value, key) {
+            $localStorage.users[key]["push"] = $scope.lifts;
+        });
+    };
 });
 
 kinoApp.service('RoundService', function() {
